@@ -5,6 +5,7 @@ import numpy
 from sklearn.datasets import *
 from sklearn.cross_validation import train_test_split
 from sklearn.linear_model import LogisticRegression
+plt.switch_backend("TkAgg")
 
 
 def display_digits():
@@ -33,7 +34,7 @@ def train_model():
                                                                 train_size=train_percentages[j])
             model.fit(X_train, y_train)
             test_accuracy.append(model.score(X_test, y_test))
-    test_accuracies[j] = numpy.mean(test_accuracy)
+        test_accuracies[j] = numpy.mean(test_accuracy)
 
     plt.plot(train_percentages, test_accuracies)
     plt.xlabel('Percentage of Data Used for Training')
@@ -43,5 +44,6 @@ def train_model():
 
 
 if __name__ == "__main__":
-    display_digits()
+    # display_digits()
+    train_model()
     # train_model()
