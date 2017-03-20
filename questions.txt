@@ -1,0 +1,30 @@
+# Hannah Kolano
+# March 19th, 2017
+# Answers to the questions posed in the Machine Learning Toolbox
+
+1. What is the general trend in the curve?
+
+The general curve is linearly increasing. As the percentage of test samples
+increases, the accuracy increases.
+
+2. Are there parts in the curve that seem to be noisier than others? Why?
+
+The beginning of the graph (the lower numbers) are generally noisier. With a
+small sample, there are many more combinations of which examples were taken for
+training. So whereas one iteration might get a bunch of 8's to train on, it
+might get 8's pretty well but not the others. Conversely, it might get a decent
+spread of all of them and be more accurate overall. It just depends on what
+sample it takes. When the proportion grows, there are less possible combinations
+of trainings, so the results are more consistent.
+
+3. How many trials do you need to get a smooth curve?
+
+Depends on the definition of smooth, I guess. At 20 trials it's pretty
+consistent trial-to-trial, but it's not until around 50 trials that the curve
+itself smooths out.
+
+4. Try different values for C. What happens?
+
+When the C value is smaller, the accuracy drops. When it is larger, the
+accuracy increases. This leads me to believe that it has something to do with
+what the program counts as "accurate". 

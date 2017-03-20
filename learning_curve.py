@@ -20,7 +20,7 @@ def display_digits():
 
 def train_model():
     data = load_digits()
-    model = LogisticRegression(C=10**-10)
+    model = LogisticRegression(C=10**-1)
     num_trials = 10
     train_percentages = [.05, .1, .15, .2, .25, .3, .35, .4, .45, .5, .55, .6,
                          .65, .7, .75, .8, .85, .9, .95]
